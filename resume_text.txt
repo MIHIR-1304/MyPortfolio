@@ -1,0 +1,65 @@
+CONTACT
+SOFT SKILLS
+LANGUAGES
+PROFILE
+6204811877Phone:
+mihirmahato1304@gmail.comEmail Address:
+Sini, Seraikela-Kharsawan,
+Jharkhnad 833220Address:
+https://mihir-
+1304.github.io/3d-Portfolio/Website
+TECH SKILLS
+Teamwork
+Time Management
+Leadership
+Creative Thinking 
+Quick Learning Ability
+English (Fluent)
+Hindi
+BengaliMIHIR MAHATO
+COM PUTER SCIENCE STUDENT 
+EDUCATIONB.Tech Computer Science Engineering student specializing in building real-
+world software systems, AI-driven applications, and interactive 3D solutions.
+Experienced in delivering industry projects involving automation, data
+processing, visualization, and intelligent interfaces with strong CS
+fundamentals.
+2022 - 2026 Bachelor of Technology  
+Computer Science and Engineering |Chaibasa Engineering College
+2019-2021 Intermediate in Science
+Central Karimia+2 High School, Jamshedpur
+Percentage:CGPA:8.13
+Python (Expert)
+Java (Expert)
+C++ (Expert)
+Data Structures
+Blender 3D, Unreal Engine
+SQL, MySQL
+Machine Learning
+Frontend DevelopmentPROJECTS
+JUNE 2025 - JULY 2025 
+TataNav: 3D Locator and Navigator Interface
+ Developed 3D plant navigation system with real-time employee tracking.
+ Automated pathfinding and visualization using Python–Blender integration. 
+Delivered multi-platform interactive web interface.
+NOBoT– AI Integrated Spider Quadrobot for Rescue and Exploration
+POSITIONS OF RESPONSIBILITY
+Student Placement Representative (SPR)– Managed placement
+coordination between students and recruiters
+Vice President, Techspire– Led technical events, workshops, and
+hackathons to promote innovation and skill development.Technologies Used: 
+Built AI-driven quadrobot for hazardous terrain navigation and rescue scenarios. 
+Implemented real-time edge AI object detection and sensor fusion system. 
+Enabled live control, video, and telemetry monitoring.
+Technologies Used: Python, Raspberry Pi 5, Arduino, OpenCV, YOLO
+Core Committee Member, Navkriti– Managed event planning and
+execution for the annual technical festival.
+72.8
+ Blender, Python, Tkinter, JSON, Frontend
+Matriculation
+High School Dhatkidih, Dhatkidih
+Percentage:83.62018-2019
+3D Portfolio Website, Personal Project
+Technologies Used: Designed a fully responsive 3D portfolio website showcasing projects and models.
+Integrated interactive 3D animations using Spline 3D.
+Implemented smooth transitions and dynamic UI with HTML, CSS, and JavaScript.
+ HTML, CSS, JavaScript, Spline 3D
