@@ -68,11 +68,14 @@ space-portfolio/
   |- .eslintrc.json
   |- .gitignore
   |- eslint.config.mjs
+  |- Mihir_Resume123 (2).pdf
   |- netlify.toml
   |- next.config.js
   |- package-lock.json
   |- package.json
   |- postcss.config.js
+  |- remove_bg_color.py
+  |- resume_text.txt
   |- tailwind.config.ts
   |- tsconfig.json
 ```
@@ -121,7 +124,7 @@ Useful resources and dependencies that are used in Space Portfolio.
 - [@react-three/drei](https://www.npmjs.com/package/@react-three/drei): ^10.7.7
 - [@react-three/fiber](https://www.npmjs.com/package/@react-three/fiber): ^9.5.0
 - [@types/node](https://www.npmjs.com/package/@types/node): ^25
-- [@types/react](https://www.npmjs.com/package/@types/react): 19.2.14
+- [@types/react](https://www.npmjs.com/package/@types/react): ^19.2.14
 - [@types/react-dom](https://www.npmjs.com/package/@types/react-dom): 19.2.3
 - [autoprefixer](https://www.npmjs.com/package/autoprefixer): ^10.4.27
 - [clsx](https://www.npmjs.com/package/clsx): ^2.1.1
