@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080720"/>
+      <stop offset="50%" stop-color="#120c38"/>
+      <stop offset="100%" stop-color="#060417"/>
+    </linearGradient>
+    <linearGradient id="bubble1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+    <linearGradient id="bubble2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#bg)"/>
+
+  <circle cx="400" cy="200" r="140" fill="#6366f1" opacity="0.12" filter="url(#glow)"/>
+
+  <!-- Network Connection Nodes -->
+  <g stroke="#6366f1" stroke-width="1.5" stroke-dasharray="4,4" opacity="0.6">
+    <line x1="220" y1="160" x2="400" y2="120"/>
+    <line x1="580" y1="160" x2="400" y2="120"/>
+    <line x1="260" y1="280" x2="400" y2="240"/>
+    <line x1="540" y1="280" x2="400" y2="240"/>
+  </g>
+
+  <!-- Server Hub Node in Center -->
+  <circle cx="400" cy="180" r="36" fill="#1e1b4b" stroke="#818cf8" stroke-width="3"/>
+  <text x="400" y="185" text-anchor="middle" fill="#c7d2fe" font-family="monospace" font-size="12" font-weight="bold">PORT:8080</text>
+
+  <!-- Chat Bubbles -->
+  <rect x="140" y="120" width="180" height="60" rx="12" fill="url(#bubble1)" opacity="0.9"/>
+  <text x="160" y="145" fill="#ffffff" font-family="sans-serif" font-size="12" font-weight="bold">Client #1 [Connected]</text>
+  <text x="160" y="165" fill="#e0e7ff" font-family="monospace" font-size="11">SYN_ACK / TCP Stream</text>
+
+  <rect x="480" y="120" width="180" height="60" rx="12" fill="url(#bubble2)" opacity="0.9"/>
+  <text x="500" y="145" fill="#ffffff" font-family="sans-serif" font-size="12" font-weight="bold">Client #2 [Active]</text>
+  <text x="500" y="165" fill="#cffafe" font-family="monospace" font-size="11">DataPacket: Encrypted</text>
+
+  <rect x="220" y="240" width="360" height="70" rx="14" fill="#1e1b4b" stroke="#4f46e5" stroke-width="2"/>
+  <circle cx="250" cy="275" r="10" fill="#22c55e"/>
+  <text x="275" y="270" fill="#e0e7ff" font-family="monospace" font-size="13">ThreadPoolWorker: Running (Clients: 12)</text>
+  <text x="275" y="292" fill="#a5b4fc" font-family="monospace" font-size="11">Latency: 4ms • Java Socket Channel</text>
+
+  <rect x="200" y="380" width="400" height="40" rx="20" fill="#1e1b4b" stroke="#818cf8" stroke-width="1.5"/>
+  <text x="400" y="405" text-anchor="middle" fill="#c7d2fe" font-family="sans-serif" font-size="16" font-weight="bold">⚡ MULTITHREADED CHAT &amp; FILE SERVER</text>
+  <text x="400" y="445" text-anchor="middle" fill="#94a3b8" font-family="sans-serif" font-size="14">Java Sockets • Thread Pooling • TCP/IP • Non-Blocking IO</text>
+</svg>

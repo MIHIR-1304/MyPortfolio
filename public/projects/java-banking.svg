@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b051f"/>
+      <stop offset="50%" stop-color="#140a2e"/>
+      <stop offset="100%" stop-color="#070214"/>
+    </linearGradient>
+    <linearGradient id="cardGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#ec4899"/>
+    </linearGradient>
+    <linearGradient id="cyberBorder" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#8b5cf6" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0.8"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <rect width="800" height="500" fill="url(#bg)"/>
+  
+  <!-- Subtle Grid -->
+  <g opacity="0.12" stroke="#8b5cf6" stroke-width="1">
+    <line x1="0" y1="50" x2="800" y2="50"/>
+    <line x1="0" y1="100" x2="800" y2="100"/>
+    <line x1="0" y1="150" x2="800" y2="150"/>
+    <line x1="0" y1="200" x2="800" y2="200"/>
+    <line x1="0" y1="250" x2="800" y2="250"/>
+    <line x1="0" y1="300" x2="800" y2="300"/>
+    <line x1="0" y1="350" x2="800" y2="350"/>
+    <line x1="0" y1="400" x2="800" y2="400"/>
+    <line x1="0" y1="450" x2="800" y2="450"/>
+    <line x1="100" y1="0" x2="100" y2="500"/>
+    <line x1="200" y1="0" x2="200" y2="500"/>
+    <line x1="300" y1="0" x2="300" y2="500"/>
+    <line x1="400" y1="0" x2="400" y2="500"/>
+    <line x1="500" y1="0" x2="500" y2="500"/>
+    <line x1="600" y1="0" x2="600" y2="500"/>
+    <line x1="700" y1="0" x2="700" y2="500"/>
+  </g>
+
+  <!-- Glowing orb in center -->
+  <circle cx="400" cy="200" r="140" fill="#f59e0b" opacity="0.15" filter="url(#glow)"/>
+
+  <!-- Banking Vault / Terminal Window Graphic -->
+  <rect x="180" y="70" width="440" height="280" rx="16" fill="#181135" stroke="url(#cyberBorder)" stroke-width="2" opacity="0.95"/>
+  <rect x="180" y="70" width="440" height="40" rx="16" fill="#24174d"/>
+  
+  <!-- Window Controls -->
+  <circle cx="210" cy="90" r="6" fill="#ef4444"/>
+  <circle cx="230" cy="90" r="6" fill="#f59e0b"/>
+  <circle cx="250" cy="90" r="6" fill="#10b981"/>
+  <text x="400" y="95" text-anchor="middle" fill="#a78bfa" font-family="monospace" font-size="14" font-weight="bold">SecureBankCore.java [Java Swing / ACID]</text>
+
+  <!-- Bank Credit Card Graphic Inside -->
+  <rect x="220" y="130" width="360" height="180" rx="12" fill="url(#cardGlow)" opacity="0.85"/>
+  <!-- Card Chip -->
+  <rect x="250" y="160" width="40" height="30" rx="6" fill="#fef08a" stroke="#ca8a04" stroke-width="2"/>
+  <text x="250" y="230" fill="#ffffff" font-family="monospace" font-size="18" letter-spacing="4">**** **** **** 8492</text>
+  <text x="250" y="270" fill="#fef08a" font-family="sans-serif" font-size="12" font-weight="bold">BALANCE: $48,250.00</text>
+  <text x="500" y="270" fill="#ffffff" font-family="sans-serif" font-size="14" font-weight="bold">JAVA JDBC</text>
+
+  <!-- Project Badge & Title -->
+  <rect x="230" y="380" width="340" height="40" rx="20" fill="#24174d" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="400" y="405" text-anchor="middle" fill="#fbbf24" font-family="sans-serif" font-size="16" font-weight="bold">☕ SMART BANKING &amp; TRANSACTION SYSTEM</text>
+  <text x="400" y="445" text-anchor="middle" fill="#94a3b8" font-family="sans-serif" font-size="14">Core Java • Swing GUI • MySQL JDBC • ACID Security</text>
+</svg>

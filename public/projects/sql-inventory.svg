@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#081026"/>
+      <stop offset="50%" stop-color="#111c44"/>
+      <stop offset="100%" stop-color="#050a17"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#bg)"/>
+
+  <!-- Entity Relationship Diagram Tables Graphic -->
+  <g transform="translate(140, 100)">
+    <!-- Table 1: Products -->
+    <rect x="0" y="0" width="150" height="130" rx="8" fill="#1e293b" stroke="#3b82f6" stroke-width="1.5"/>
+    <rect x="0" y="0" width="150" height="28" rx="8" fill="#2563eb"/>
+    <text x="75" y="19" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="12" font-weight="bold">Products</text>
+    <text x="15" y="50" fill="#93c5fd" font-family="monospace" font-size="11">🔑 product_id</text>
+    <text x="15" y="70" fill="#cbd5e1" font-family="monospace" font-size="11">sku_code</text>
+    <text x="15" y="90" fill="#cbd5e1" font-family="monospace" font-size="11">unit_price</text>
+    <text x="15" y="110" fill="#cbd5e1" font-family="monospace" font-size="11">stock_quantity</text>
+
+    <!-- Table 2: Orders (Center) -->
+    <rect x="200" y="30" width="150" height="120" rx="8" fill="#1e293b" stroke="#8b5cf6" stroke-width="1.5"/>
+    <rect x="200" y="30" width="150" height="28" rx="8" fill="#7c3aed"/>
+    <text x="275" y="49" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="12" font-weight="bold">Orders</text>
+    <text x="215" y="80" fill="#c4b5fd" font-family="monospace" font-size="11">🔑 order_id</text>
+    <text x="215" y="100" fill="#cbd5e1" font-family="monospace" font-size="11">order_date</text>
+    <text x="215" y="120" fill="#cbd5e1" font-family="monospace" font-size="11">total_amount</text>
+
+    <!-- Table 3: Order_Items -->
+    <rect x="390" y="0" width="150" height="130" rx="8" fill="#1e293b" stroke="#10b981" stroke-width="1.5"/>
+    <rect x="390" y="0" width="150" height="28" rx="8" fill="#059669"/>
+    <text x="465" y="19" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="12" font-weight="bold">Order_Items</text>
+    <text x="405" y="50" fill="#6ee7b7" font-family="monospace" font-size="11">🔗 order_id (FK)</text>
+    <text x="405" y="70" fill="#6ee7b7" font-family="monospace" font-size="11">🔗 product_id (FK)</text>
+    <text x="405" y="90" fill="#cbd5e1" font-family="monospace" font-size="11">quantity</text>
+    <text x="405" y="110" fill="#cbd5e1" font-family="monospace" font-size="11">item_subtotal</text>
+
+    <!-- Connecting lines -->
+    <path d="M 150 50 L 200 80" stroke="#38bdf8" stroke-width="2" stroke-dasharray="4,2"/>
+    <path d="M 350 80 L 390 50" stroke="#a78bfa" stroke-width="2" stroke-dasharray="4,2"/>
+  </g>
+
+  <rect x="180" y="290" width="440" height="40" rx="8" fill="#0f172a" stroke="#8b5cf6" stroke-width="1"/>
+  <text x="400" y="315" text-anchor="middle" fill="#c4b5fd" font-family="monospace" font-size="12">CREATE MATERIALIZED VIEW v_daily_revenue AS ...</text>
+
+  <rect x="180" y="380" width="440" height="40" rx="20" fill="#111c44" stroke="#8b5cf6" stroke-width="1.5"/>
+  <text x="400" y="405" text-anchor="middle" fill="#c4b5fd" font-family="sans-serif" font-size="16" font-weight="bold">📈 INVENTORY &amp; SALES REPORTING DATABASE</text>
+  <text x="400" y="445" text-anchor="middle" fill="#94a3b8" font-family="sans-serif" font-size="14">Relational Schema • Foreign Keys • Materialized Views • Audit Logs</text>
+</svg>

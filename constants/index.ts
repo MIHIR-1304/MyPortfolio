@@ -296,112 +296,399 @@ export const OTHER_SKILL = [
   },
 ] as const;
 
+export const PROJECT_CATEGORIES = [
+  {
+    id: "all",
+    name: "All",
+    label: "All Projects",
+    description: "Browse all software, 3D animations, databases, and robotics creations",
+    accent: "from-purple-500 to-cyan-500",
+    badgeColor: "border-purple-500/50 text-purple-300 bg-purple-500/10",
+    subcategories: [],
+  },
+  {
+    id: "blender",
+    name: "Blender 3D",
+    label: "Blender 3D",
+    description: "3D environments, game assets, and cinematic product animations",
+    accent: "from-orange-500 to-amber-400",
+    badgeColor: "border-orange-500/50 text-orange-300 bg-orange-500/10",
+    subcategories: [
+      { id: "all-blender", label: "All Blender (12)" },
+      { id: "game-assets", label: "🎮 Game Assets & 3D Models (3)" },
+      { id: "3d-environment", label: "🏞️ 3D Environments & Scenes (5)" },
+      { id: "product-animation", label: "📱 Product Animations & Ads (4)" },
+    ],
+  },
+  {
+    id: "java",
+    name: "Java Projects",
+    label: "Java Projects",
+    description: "Core Java desktop systems, multithreading, and OOP architectures",
+    accent: "from-red-500 to-amber-400",
+    badgeColor: "border-red-500/50 text-red-300 bg-red-500/10",
+    subcategories: [
+      { id: "all-java", label: "All Java (3)" },
+      { id: "desktop-core", label: "🖥️ Desktop & Core Java" },
+      { id: "networking", label: "⚡ Network & Concurrency" },
+      { id: "management", label: "📦 Management Systems" },
+    ],
+  },
+  {
+    id: "sql",
+    name: "SQL Projects",
+    label: "SQL & Databases",
+    description: "Normalized relational schemas, query tuning, indexing & data analytics",
+    accent: "from-blue-500 to-cyan-400",
+    badgeColor: "border-blue-500/50 text-blue-300 bg-blue-500/10",
+    subcategories: [
+      { id: "all-sql", label: "All SQL (3)" },
+      { id: "dbms", label: "🗄️ Database Architecture" },
+      { id: "analytics", label: "📊 Query Optimization & Analytics" },
+      { id: "warehousing", label: "📈 Reporting & Warehousing" },
+    ],
+  },
+  {
+    id: "backend",
+    name: "Backend Projects",
+    label: "Backend & APIs",
+    description: "Scalable REST APIs, real-time WebSockets, auth, and automated data pipelines",
+    accent: "from-emerald-500 to-teal-400",
+    badgeColor: "border-emerald-500/50 text-emerald-300 bg-emerald-500/10",
+    subcategories: [
+      { id: "all-backend", label: "All Backend (3)" },
+      { id: "rest-apis", label: "⚙️ REST APIs & Microservices" },
+      { id: "automation", label: "📑 Automation & Tools" },
+      { id: "realtime", label: "📡 Real-time Systems" },
+    ],
+  },
+  {
+    id: "graphic-design",
+    name: "Graphic Design",
+    label: "Graphic Design",
+    description: "Futuristic space branding, cyberpunk game UI / HUD, and digital posters",
+    accent: "from-pink-500 to-purple-500",
+    badgeColor: "border-pink-500/50 text-pink-300 bg-pink-500/10",
+    subcategories: [
+      { id: "all-graphics", label: "All Designs (3)" },
+      { id: "brand-identity", label: "🎨 Brand Identity & Logos" },
+      { id: "ui-hud", label: "🛸 Sci-Fi UI & HUD Concepts" },
+      { id: "promos", label: "✨ Marketing & Posters" },
+    ],
+  },
+  {
+    id: "ai-robotics",
+    name: "AI & Robotics",
+    label: "AI, Robotics & Web",
+    description: "Autonomous quadrobot, 3D plant tracking interface, and interactive web apps",
+    accent: "from-cyan-500 to-blue-500",
+    badgeColor: "border-cyan-500/50 text-cyan-300 bg-cyan-500/10",
+    subcategories: [
+      { id: "all-robotics", label: "All AI & Systems (3)" },
+      { id: "robotics-ai", label: "🤖 Robotics & Edge AI" },
+      { id: "interactive-3d", label: "🌐 Interactive 3D Web" },
+    ],
+  },
+] as const;
+
 export const PROJECTS = [
+  // AI & Robotics
   {
     title: "TataNav: 3D Locator and Navigator Interface",
     description:
-      'Developed 3D plant navigation system with real-time employee tracking. Automated pathfinding and visualization using Python–Blender integration. Delivered multi-platform interactive web interface.',
+      "Developed 3D plant navigation system with real-time employee tracking. Automated pathfinding and visualization using Python–Blender integration. Delivered multi-platform interactive web interface.",
     image: "/projects/project-1-new.png",
     video: "/videos/tatanav.mp4",
-    link: "https://mihir-1304.github.io/3d-Portfolio/Website",
+    link: "https://github.com/MIHIR-1304/TataNav-3D-Locator-and-Navigator-Interface-Tata-Power-",
+    category: "AI & Robotics",
+    subcategory: "Robotics & Edge AI",
+    tags: ["Python", "Blender", "Pathfinding", "Web Interface"],
   },
   {
-    title: "NOBoT– AI Integrated Spider Quadrobot",
+    title: "NOBoT – AI Integrated Spider Quadrobot",
     description:
-      'Built AI-driven quadrobot for hazardous terrain navigation and rescue scenarios. Implemented real-time edge AI object detection and sensor fusion system. Enabled live control, video, and telemetry monitoring using Python, Raspberry Pi, Arduino.',
+      "Built AI-driven quadrobot for hazardous terrain navigation and rescue scenarios. Implemented real-time edge AI object detection and sensor fusion system. Enabled live control, video, and telemetry monitoring using Python, Raspberry Pi, Arduino.",
     image: "/projects/project-2.jpg",
     link: "https://mihir-1304.github.io/3d-Portfolio/Website",
+    category: "AI & Robotics",
+    subcategory: "Robotics & Edge AI",
+    tags: ["Python", "Raspberry Pi", "Arduino", "OpenCV", "YOLO"],
   },
   {
     title: "3D Portfolio Website",
     description:
-      'Designed a fully responsive 3D portfolio website showcasing projects and models. Integrated interactive 3D animations using Spline 3D. Implemented smooth transitions and dynamic UI with HTML, CSS, and JavaScript.',
+      "Designed a fully responsive 3D portfolio website showcasing projects and models. Integrated interactive 3D animations using Spline 3D. Implemented smooth transitions and dynamic UI with HTML, CSS, and JavaScript.",
     image: "/projects/project-3.png",
     link: "https://mihir-1304.github.io/3d-Portfolio/Website",
+    category: "AI & Robotics",
+    subcategory: "Interactive 3D Web",
+    tags: ["Next.js", "Three.js", "Spline 3D", "Tailwind CSS"],
   },
+
+  // Blender 3D: Product Animations
   {
     title: "Iphone 12 product animation",
-    description: "A 3D product animation of the iPhone 12 made in Blender, focusing on realistic materials, dynamic lighting, and smooth motion to create a modern tech-style showcase.",
+    description:
+      "A 3D product animation of the iPhone 12 made in Blender, focusing on realistic materials, dynamic lighting, and smooth motion to create a modern tech-style showcase.",
     image: "/projects/project-4.png",
     video: "/videos/iphone-12-product-animation.mp4",
     link: "https://github.com/mihir-1304",
+    category: "Blender 3D",
+    subcategory: "Product Animations & Ads",
+    tags: ["Blender", "Product Animation", "Hard Surface", "Lighting"],
   },
   {
     title: "Nivia Product animation",
-    description: "A 3D product animation of the Nivia product made in Blender, focusing on realistic materials, dynamic lighting, and smooth motion to create a modern tech-style showcase.",
+    description:
+      "A 3D product animation of the Nivia product made in Blender, focusing on realistic materials, dynamic lighting, and smooth motion to create a modern tech-style showcase.",
     image: "/projects/project-5.png",
     video: "/videos/Nivea.mp4",
     link: "https://github.com/mihir-1304",
-  },
-  {
-    title: "Anime scene",
-    description: "A 3D anime scene made in Blender, focusing on realistic materials, dynamic lighting, and smooth motion to create a modern tech-style showcase.",
-    image: "/projects/project-6.png",
-    video: "/videos/Anime.mp4",
-    link: "https://github.com/mihir-1304",
-  },
-  {
-    title: "Cinematic Night City Scene",
-    description: "A 3D cinematic night city scene made in Blender, focusing on realistic materials, dynamic lighting, and smooth motion to create a modern tech-style showcase.",
-    image: "/projects/project-7.png",
-    video: "/videos/Cinematic.mp4",
-    link: "https://github.com/mihir-1304",
+    category: "Blender 3D",
+    subcategory: "Product Animations & Ads",
+    tags: ["Blender", "Fluid Simulation", "Motion Design", "Commercial"],
   },
   {
     title: "Airpods Animation",
-    description: "A 3D airpods animation made in Blender, focusing on realistic materials, dynamic lighting, and smooth motion to create a modern tech-style showcase.",
+    description:
+      "A 3D airpods animation made in Blender, focusing on realistic materials, dynamic lighting, and smooth motion to create a modern tech-style showcase.",
     image: "/projects/project-8.png",
     video: "/videos/Airpods.mp4",
     link: "https://github.com/mihir-1304",
-  },
-  {
-    title: "Bullet Train Cinematic Animation",
-    description: "A 3D bullet train cinematic animation made in Blender, focusing on realistic materials, dynamic lighting, and smooth motion to create a modern tech-style showcase.",
-    image: "/projects/project-9.png",
-    video: "/videos/Bullet.mp4",
-    link: "https://github.com/mihir-1304",
-  },
-  {
-    title: "Horror Cinematic",
-    description: "A 3D horror cinematic animation made in Blender, focusing on realistic materials, dynamic lighting, and smooth motion to create a modern tech-style showcase.",
-    image: "/projects/project-10.png",
-    video: "/videos/Horror.mp4",
-    link: "https://github.com/mihir-1304",
-  },
-  {
-    title: " Night Soul Cinematic Scene",
-    description: "A 3D night soul cinematic scene made in Blender, focusing on realistic materials, dynamic lighting, and smooth motion to create a modern tech-style showcase.",
-    image: "/projects/project-11.png",
-    video: "/videos/soul.mp4",
-    link: "https://github.com/mihir-1304",
+    category: "Blender 3D",
+    subcategory: "Product Animations & Ads",
+    tags: ["Blender", "Exploded View", "Materials", "Commercial"],
   },
   {
     title: "Spectacles Ad",
-    description: "A 3D spectacles ad made in Blender, focusing on realistic materials, dynamic lighting, and smooth motion to create a modern tech-style showcase.",
+    description:
+      "A 3D spectacles ad made in Blender, focusing on realistic materials, dynamic lighting, and smooth motion to create a modern tech-style showcase.",
     image: "/projects/project-12.png",
     video: "/videos/Specs.mp4",
     link: "https://github.com/mihir-1304",
+    category: "Blender 3D",
+    subcategory: "Product Animations & Ads",
+    tags: ["Blender", "Optics Refraction", "Motion Design", "Lighting"],
+  },
+
+  // Blender 3D: 3D Environments & Scenes
+  {
+    title: "Anime scene",
+    description:
+      "A 3D anime scene made in Blender, focusing on realistic materials, dynamic lighting, and smooth motion to create a modern tech-style showcase.",
+    image: "/projects/project-6.png",
+    video: "/videos/Anime.mp4",
+    link: "https://github.com/mihir-1304",
+    category: "Blender 3D",
+    subcategory: "3D Environments & Scenes",
+    tags: ["Blender", "Cel Shading", "Stylized 3D", "Environment"],
   },
   {
-    title: "Rubix Cube",
-    description: "A 3D rubix cube made in Blender, focusing on realistic materials, dynamic lighting, and smooth motion to create a modern tech-style showcase.",
-    image: "/projects/project-13.png",
-    model: "/models/rubix.glb", // <-- REPLACE THIS with your own .glb file!
+    title: "Cinematic Night City Scene",
+    description:
+      "A 3D cinematic night city scene made in Blender, focusing on realistic materials, dynamic lighting, and smooth motion to create a modern tech-style showcase.",
+    image: "/projects/project-7.png",
+    video: "/videos/Cinematic.mp4",
     link: "https://github.com/mihir-1304",
+    category: "Blender 3D",
+    subcategory: "3D Environments & Scenes",
+    tags: ["Blender", "Cyberpunk", "Lighting", "Environment"],
+  },
+  {
+    title: "Bullet Train Cinematic Animation",
+    description:
+      "A 3D bullet train cinematic animation made in Blender, focusing on realistic materials, dynamic lighting, and smooth motion to create a modern tech-style showcase.",
+    image: "/projects/project-9.png",
+    video: "/videos/Bullet.mp4",
+    link: "https://github.com/mihir-1304",
+    category: "Blender 3D",
+    subcategory: "3D Environments & Scenes",
+    tags: ["Blender", "Motion Blur", "Cinematic", "Environment"],
+  },
+  {
+    title: "Horror Cinematic",
+    description:
+      "A 3D horror cinematic animation made in Blender, focusing on realistic materials, dynamic lighting, and smooth motion to create a modern tech-style showcase.",
+    image: "/projects/project-10.png",
+    video: "/videos/Horror.mp4",
+    link: "https://github.com/mihir-1304",
+    category: "Blender 3D",
+    subcategory: "3D Environments & Scenes",
+    tags: ["Blender", "Atmospheric", "Volumetrics", "Environment"],
+  },
+  {
+    title: "Night Soul Cinematic Scene",
+    description:
+      "A 3D night soul cinematic scene made in Blender, focusing on realistic materials, dynamic lighting, and smooth motion to create a modern tech-style showcase.",
+    image: "/projects/project-11.png",
+    video: "/videos/soul.mp4",
+    link: "https://github.com/mihir-1304",
+    category: "Blender 3D",
+    subcategory: "3D Environments & Scenes",
+    tags: ["Blender", "VFX Particles", "Lighting", "Environment"],
+  },
+
+  // Blender 3D: Game Assets & 3D Models
+  {
+    title: "Rubix Cube",
+    description:
+      "A 3D interactive rubix cube made in Blender, focusing on realistic materials, dynamic lighting, and smooth motion to create a modern tech-style showcase.",
+    image: "/projects/project-13.png",
+    model: "/models/rubix.glb",
+    link: "https://github.com/mihir-1304",
+    category: "Blender 3D",
+    subcategory: "Game Assets & 3D Models",
+    tags: ["Blender", "Interactive 3D", "Game Asset", "GLTF"],
   },
   {
     title: "Pokeball",
-    description: "A 3D pokeball made in Blender, focusing on realistic materials, dynamic lighting, and smooth motion to create a modern tech-style showcase.",
+    description:
+      "A 3D pokeball model made in Blender, focusing on realistic materials, dynamic lighting, and smooth motion to create a modern tech-style showcase.",
     image: "/projects/project-14.png",
     model: "/models/pokeball.glb",
     link: "https://github.com/mihir-1304",
+    category: "Blender 3D",
+    subcategory: "Game Assets & 3D Models",
+    tags: ["Blender", "3D Model", "PBR Texture", "GLTF"],
   },
   {
     title: "Skeleton hand",
-    description: "A 3D skeleton hand made in Blender, focusing on realistic materials, dynamic lighting, and smooth motion to create a modern tech-style showcase.",
+    description:
+      "A 3D skeleton hand anatomy model made in Blender, focusing on realistic materials, dynamic lighting, and smooth motion to create a modern tech-style showcase.",
     image: "/projects/project-15.png",
     model: "/models/skeleton.glb",
     link: "https://github.com/mihir-1304",
+    category: "Blender 3D",
+    subcategory: "Game Assets & 3D Models",
+    tags: ["Blender", "Sculpting", "Anatomy", "GLTF"],
+  },
+
+  // Java Projects
+  {
+    title: "Smart Banking & Transaction Management System",
+    description:
+      "Enterprise-grade Java desktop banking software with ACID transaction ledger, multi-user authentication, OOP design patterns, and MySQL JDBC persistence.",
+    image: "/projects/java-banking.svg",
+    link: "https://github.com/mihir-1304",
+    category: "Java Projects",
+    subcategory: "Desktop & Core Java",
+    tags: ["Java", "Swing / JavaFX", "OOP", "JDBC", "MySQL"],
+  },
+  {
+    title: "High-Concurrency Multi-threaded Chat Server",
+    description:
+      "High-performance networked communication system using Java Sockets, thread pooling, custom packet serialization, and multi-client broadcast synchronization.",
+    image: "/projects/java-chat.svg",
+    link: "https://github.com/mihir-1304",
+    category: "Java Projects",
+    subcategory: "Network & Concurrency",
+    tags: ["Java", "Multithreading", "Socket Programming", "TCP/IP"],
+  },
+  {
+    title: "Enterprise Inventory & Supply Chain Controller",
+    description:
+      "Modular inventory tracking system with dynamic reporting, stock alert triggers, barcode scanner integration, and automated invoice PDF generation.",
+    image: "/projects/java-inventory.svg",
+    link: "https://github.com/mihir-1304",
+    category: "Java Projects",
+    subcategory: "Management Systems",
+    tags: ["Java", "MVC Pattern", "Hibernate", "JDBC", "SQL"],
+  },
+
+  // SQL Projects
+  {
+    title: "Comprehensive Hospital DBMS & Analytics Schema",
+    description:
+      "Production-ready relational database architecture normalized to 3NF, featuring stored procedures, cascading triggers, role security, and index optimization.",
+    image: "/projects/sql-hospital.svg",
+    link: "https://github.com/mihir-1304",
+    category: "SQL Projects",
+    subcategory: "Database Architecture",
+    tags: ["SQL", "MySQL", "Normalization", "Stored Procedures", "Triggers"],
+  },
+  {
+    title: "E-Commerce High-Volume Data Analytics Engine",
+    description:
+      "Advanced analytical SQL queries utilizing window functions, subquery partitioning, composite indexing, and execution plan optimization for high transaction volume.",
+    image: "/projects/sql-ecommerce.svg",
+    link: "https://github.com/mihir-1304",
+    category: "SQL Projects",
+    subcategory: "Query Optimization & Analytics",
+    tags: ["SQL", "Query Optimization", "Window Functions", "Analytics", "PostgreSQL"],
+  },
+  {
+    title: "Automated Inventory & Sales Reporting Database",
+    description:
+      "Relational database schema with materialized views, audit trails, periodic aggregation routines, and automated business KPI generation.",
+    image: "/projects/sql-inventory.svg",
+    link: "https://github.com/mihir-1304",
+    category: "SQL Projects",
+    subcategory: "Reporting & Warehousing",
+    tags: ["SQL", "Relational Schema", "Views", "Audit Logs", "MySQL"],
+  },
+
+  // Backend Projects
+  {
+    title: "Scalable RESTful Microservices API Engine",
+    description:
+      "Robust backend API service engineered with Node.js and Express, implementing JWT auth, RBAC permissions, rate-limiting, and comprehensive Swagger documentation.",
+    image: "/projects/backend-api.svg",
+    link: "https://github.com/mihir-1304",
+    category: "Backend Projects",
+    subcategory: "REST APIs & Microservices",
+    tags: ["Node.js", "Express.js", "JWT", "REST API", "MongoDB"],
+  },
+  {
+    title: "Advanced Excel Data Processing & Automation Engine",
+    description:
+      "High-throughput data manipulation and formula execution engine for complex spreadsheets, streamlining automated data validation and report exports.",
+    image: "/projects/Advance_excel.png",
+    link: "https://github.com/MIHIR-1304/Advanced_Excel_Editor",
+    category: "Backend Projects",
+    subcategory: "Automation & Tools",
+    tags: ["Python", "Node.js", "Data Automation", "Algorithms"],
+  },
+  {
+    title: "Real-Time WebSocket Notification & Telemetry Hub",
+    description:
+      "Low-latency bidirectional messaging hub built on Node.js and Socket.io with pub/sub clustering for live status streams and instant alerts.",
+    image: "/projects/backend-realtime.svg",
+    link: "https://github.com/mihir-1304",
+    category: "Backend Projects",
+    subcategory: "Real-time Systems",
+    tags: ["Node.js", "WebSockets", "Socket.io", "Redis", "Event-Driven"],
+  },
+
+  // Graphic Design
+  {
+    title: "Futuristic Space & Brand Identity Suite",
+    description:
+      "Complete brand design system featuring futuristic vector logos, bespoke typography guides, and dark-space visual design elements crafted in Photoshop & Canva.",
+    image: "/projects/graphic-brand.svg",
+    link: "https://mihir-1304.github.io/3d-Portfolio/Website",
+    category: "Graphic Design",
+    subcategory: "Brand Identity & Logos",
+    tags: ["Photoshop", "Canva", "Brand Identity", "Vector Design"],
+  },
+  {
+    title: "Sci-Fi Game UI / HUD Concept System",
+    description:
+      "Interactive cyberpunk HUD layout, tactical minimap designs, energy bar gauges, and modular game interface assets created for immersive 3D titles.",
+    image: "/projects/graphic-hud.svg",
+    link: "https://mihir-1304.github.io/3d-Portfolio/Website",
+    category: "Graphic Design",
+    subcategory: "Sci-Fi UI & HUD Concepts",
+    tags: ["UI/UX", "Photoshop", "Game HUD", "Concept Art"],
+  },
+  {
+    title: "3D Motion Graphics & Digital Promotional Posters",
+    description:
+      "Creative advertising posters and digital social media campaigns combining 3D product renders, dynamic typography, and high-impact color grading.",
+    image: "/projects/graphic-poster.svg",
+    link: "https://mihir-1304.github.io/3d-Portfolio/Website",
+    category: "Graphic Design",
+    subcategory: "Marketing & Posters",
+    tags: ["Photoshop", "After Effects", "Motion Design", "Visual Arts"],
   },
 ] as const;
 

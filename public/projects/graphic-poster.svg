@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#180424"/>
+      <stop offset="50%" stop-color="#2c0a42"/>
+      <stop offset="100%" stop-color="#0f0217"/>
+    </linearGradient>
+    <linearGradient id="posterGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ec4899"/>
+      <stop offset="50%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#bg)"/>
+
+  <!-- Creative Promotional Art Poster Mockup -->
+  <g transform="translate(400, 180)">
+    <!-- Poster Frame -->
+    <rect x="-110" y="-120" width="220" height="230" rx="12" fill="#240e3b" stroke="#ec4899" stroke-width="2"/>
+    
+    <!-- Abstract 3D Ribbon / Wave Graphic inside Poster -->
+    <path d="M -90 40 Q -30 -80, 20 -20 T 80 -60 L 90 80 L -90 80 Z" fill="url(#posterGrad)" opacity="0.8"/>
+    <circle cx="-20" cy="-40" r="30" fill="#f59e0b" opacity="0.9"/>
+
+    <text x="0" y="65" text-anchor="middle" fill="#ffffff" font-family="sans-serif" font-size="14" font-weight="900" letter-spacing="3">COSMIC VISIONS</text>
+    <text x="0" y="95" text-anchor="middle" fill="#f472b6" font-family="sans-serif" font-size="9" letter-spacing="2">3D DIGITAL PROMO • 2026</text>
+  </g>
+
+  <rect x="180" y="380" width="440" height="40" rx="20" fill="#2c0a42" stroke="#ec4899" stroke-width="1.5"/>
+  <text x="400" y="405" text-anchor="middle" fill="#f472b6" font-family="sans-serif" font-size="16" font-weight="bold">✨ 3D MOTION GRAPHICS &amp; PROMO POSTERS</text>
+  <text x="400" y="445" text-anchor="middle" fill="#94a3b8" font-family="sans-serif" font-size="14">Photoshop • After Effects • Digital Advertising • Visual Art</text>
+</svg>

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#051726"/>
+      <stop offset="50%" stop-color="#0a2840"/>
+      <stop offset="100%" stop-color="#020d17"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#bg)"/>
+
+  <!-- Futuristic Sci-Fi Game HUD Reticle & Crosshairs -->
+  <g transform="translate(400, 180)">
+    <!-- Outer Circular Gauge with Segments -->
+    <circle cx="0" cy="0" r="110" fill="none" stroke="#00f5ff" stroke-width="2" stroke-dasharray="12,6" opacity="0.7"/>
+    <circle cx="0" cy="0" r="85" fill="none" stroke="#06b6d4" stroke-width="3" stroke-dasharray="80,20,40,10"/>
+    <circle cx="0" cy="0" r="60" fill="none" stroke="#38bdf8" stroke-width="1.5"/>
+
+    <!-- Corner Brackets -->
+    <path d="M -130 -90 L -150 -90 L -150 -70" fill="none" stroke="#00f5ff" stroke-width="3"/>
+    <path d="M 130 -90 L 150 -90 L 150 -70" fill="none" stroke="#00f5ff" stroke-width="3"/>
+    <path d="M -130 90 L -150 90 L -150 70" fill="none" stroke="#00f5ff" stroke-width="3"/>
+    <path d="M 130 90 L 150 90 L 150 70" fill="none" stroke="#00f5ff" stroke-width="3"/>
+
+    <!-- Target Reticle & Status -->
+    <line x1="-30" y1="0" x2="-8" y2="0" stroke="#f43f5e" stroke-width="2"/>
+    <line x1="8" y1="0" x2="30" y2="0" stroke="#f43f5e" stroke-width="2"/>
+    <line x1="0" y1="-30" x2="0" y2="-8" stroke="#f43f5e" stroke-width="2"/>
+    <line x1="0" y1="8" x2="0" y2="30" stroke="#f43f5e" stroke-width="2"/>
+    <circle cx="0" cy="0" r="4" fill="#f43f5e"/>
+
+    <!-- Health / Shield Gauges -->
+    <rect x="-140" y="-120" width="100" height="8" rx="2" fill="#0c4a6e"/>
+    <rect x="-140" y="-120" width="85" height="8" rx="2" fill="#00f5ff"/>
+    <text x="-140" y="-130" fill="#00f5ff" font-family="monospace" font-size="10">SHIELD: 85%</text>
+
+    <rect x="40" y="-120" width="100" height="8" rx="2" fill="#0c4a6e"/>
+    <rect x="40" y="-120" width="95" height="8" rx="2" fill="#10b981"/>
+    <text x="40" y="-130" fill="#10b981" font-family="monospace" font-size="10">HULL: 95%</text>
+  </g>
+
+  <rect x="180" y="380" width="440" height="40" rx="20" fill="#0a2840" stroke="#00f5ff" stroke-width="1.5"/>
+  <text x="400" y="405" text-anchor="middle" fill="#00f5ff" font-family="sans-serif" font-size="16" font-weight="bold">🛸 SCI-FI GAME UI / HUD CONCEPT SYSTEM</text>
+  <text x="400" y="445" text-anchor="middle" fill="#94a3b8" font-family="sans-serif" font-size="14">Photoshop • Cyberpunk HUD • Game Assets • UI/UX Concept</text>
+</svg>

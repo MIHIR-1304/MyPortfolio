@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#051c24"/>
+      <stop offset="50%" stop-color="#0a2e3b"/>
+      <stop offset="100%" stop-color="#020e13"/>
+    </linearGradient>
+    <linearGradient id="chartBar" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2dd4bf"/>
+      <stop offset="100%" stop-color="#0d9488"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#bg)"/>
+
+  <!-- Analytics Chart Graphic -->
+  <g transform="translate(180, 100)">
+    <!-- Chart axes -->
+    <line x1="40" y1="180" x2="420" y2="180" stroke="#134e4a" stroke-width="2"/>
+    <line x1="40" y1="20" x2="40" y2="180" stroke="#134e4a" stroke-width="2"/>
+
+    <!-- Bars -->
+    <rect x="70" y="90" width="40" height="90" rx="4" fill="url(#chartBar)"/>
+    <rect x="130" y="50" width="40" height="130" rx="4" fill="url(#chartBar)"/>
+    <rect x="190" y="110" width="40" height="70" rx="4" fill="url(#chartBar)"/>
+    <rect x="250" y="30" width="40" height="150" rx="4" fill="#38bdf8"/>
+    <rect x="310" y="70" width="40" height="110" rx="4" fill="url(#chartBar)"/>
+    <rect x="370" y="40" width="40" height="140" rx="4" fill="#a78bfa"/>
+
+    <!-- Trend line -->
+    <path d="M 90 80 Q 150 40, 210 100 T 270 20 T 330 60 T 390 30" fill="none" stroke="#f59e0b" stroke-width="3"/>
+    <circle cx="270" cy="20" r="5" fill="#f59e0b"/>
+  </g>
+
+  <!-- Query Optimization Callout -->
+  <rect x="160" y="300" width="480" height="40" rx="8" fill="#042f2e" stroke="#14b8a6" stroke-width="1"/>
+  <text x="180" y="325" fill="#5eead4" font-family="monospace" font-size="12">EXPLAIN ANALYZE: Index Scan using idx_orders_revenue [Cost: 0.04]</text>
+
+  <rect x="180" y="380" width="440" height="40" rx="20" fill="#0a2e3b" stroke="#2dd4bf" stroke-width="1.5"/>
+  <text x="400" y="405" text-anchor="middle" fill="#5eead4" font-family="sans-serif" font-size="16" font-weight="bold">📊 E-COMMERCE HIGH-VOLUME DATA ANALYTICS</text>
+  <text x="400" y="445" text-anchor="middle" fill="#94a3b8" font-family="sans-serif" font-size="14">PostgreSQL • Window Functions • Partitioning • Index Tuning</text>
+</svg>
