@@ -60,7 +60,7 @@ export const ContactModal = ({ isOpen, onClose }: { isOpen: boolean; onClose: ()
           <div className="text-center py-10">
             <h3 className="text-2xl font-semibold text-green-400 mb-2">Message Sent!</h3>
             <p className="text-gray-400 mb-6">
-              Thank you for reaching out. I'll get back to you as soon as possible.
+              Thank you for reaching out. I&apos;ll get back to you as soon as possible.
             </p>
             <button
               onClick={onClose}
@@ -69,7 +69,7 @@ export const ContactModal = ({ isOpen, onClose }: { isOpen: boolean; onClose: ()
               Close Window
             </button>
             <p className="text-xs text-gray-500 mt-4 border-t border-gray-800 pt-4">
-              * Note: If this is your first time using this form, please check your inbox (mihirmahato1304@gmail.com) and click 'Activate' from FormSubmit to receive future messages properly!
+              * Note: If this is your first time using this form, please check your inbox (mihirmahato1304@gmail.com) and click &apos;Activate&apos; from FormSubmit to receive future messages properly!
             </p>
           </div>
         ) : (
