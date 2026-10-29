@@ -17,19 +17,10 @@ import {
   FaSearch,
   FaLayerGroup,
   FaFilter,
-  FaCode,
-  FaHome,
-  FaGamepad,
-  FaServer,
-  FaDatabase,
-  FaPaintBrush,
-  FaArrowRight,
-  FaThLarge,
-  FaThList,
 } from "react-icons/fa";
 import { RxCross2 } from "react-icons/rx";
 
-// Category Meta with vibrant accents, icons, and gradients
+// Category Meta with accents, icons, and gradients
 const CATEGORY_META: Record<
   string,
   {
@@ -52,7 +43,7 @@ const CATEGORY_META: Record<
     description: "Modern, high-fidelity 3D product animations and interactive commercial assets.",
   },
   "Web Development": {
-    icon: FaCode,
+    icon: FaRobot,
     accentGlow: "from-cyan-500/25 via-blue-500/15 to-transparent",
     borderActive: "border-cyan-500 shadow-[0_0_25px_rgba(6,182,212,0.4)]",
     borderHover: "hover:border-cyan-400/60 hover:shadow-[0_0_25px_rgba(6,182,212,0.25)]",
@@ -61,7 +52,7 @@ const CATEGORY_META: Record<
     description: "Responsive 3D websites, interactive web applications, autonomous robotics & React projects.",
   },
   "Interior Design": {
-    icon: FaHome,
+    icon: SiBlender,
     accentGlow: "from-emerald-500/25 via-teal-500/15 to-transparent",
     borderActive: "border-emerald-500 shadow-[0_0_25px_rgba(16,185,129,0.4)]",
     borderHover: "hover:border-emerald-400/60 hover:shadow-[0_0_25px_rgba(16,185,129,0.25)]",
@@ -70,7 +61,7 @@ const CATEGORY_META: Record<
     description: "Photorealistic architectural visualizations, lighting mockups, room models & cinematic scenes.",
   },
   "Game Assets": {
-    icon: FaGamepad,
+    icon: FaCube,
     accentGlow: "from-purple-500/25 via-pink-500/15 to-transparent",
     borderActive: "border-purple-500 shadow-[0_0_25px_rgba(168,85,247,0.4)]",
     borderHover: "hover:border-purple-400/60 hover:shadow-[0_0_25px_rgba(168,85,247,0.25)]",
@@ -88,7 +79,7 @@ const CATEGORY_META: Record<
     description: "Robotics control interfaces, multi-threaded server-client systems, and logic layers.",
   },
   "Backend Projects": {
-    icon: FaServer,
+    icon: SiExpress,
     accentGlow: "from-teal-500/25 via-emerald-500/15 to-transparent",
     borderActive: "border-teal-500 shadow-[0_0_25px_rgba(20,184,166,0.4)]",
     borderHover: "hover:border-teal-400/60 hover:shadow-[0_0_25px_rgba(20,184,166,0.25)]",
@@ -97,7 +88,7 @@ const CATEGORY_META: Record<
     description: "Scalable REST APIs, spreadsheet data automation pipelines, and real-time WebSockets.",
   },
   "SQL Projects": {
-    icon: FaDatabase,
+    icon: SiMysql,
     accentGlow: "from-blue-500/25 via-cyan-500/15 to-transparent",
     borderActive: "border-blue-500 shadow-[0_0_25px_rgba(59,130,246,0.4)]",
     borderHover: "hover:border-blue-400/60 hover:shadow-[0_0_25px_rgba(59,130,246,0.25)]",
@@ -106,7 +97,7 @@ const CATEGORY_META: Record<
     description: "3NF relational schemas, stored procedures, cascading triggers, and query tuning.",
   },
   "Graphic Design": {
-    icon: FaPaintBrush,
+    icon: SiAdobephotoshop,
     accentGlow: "from-pink-500/25 via-fuchsia-500/15 to-transparent",
     borderActive: "border-pink-500 shadow-[0_0_25px_rgba(236,72,153,0.4)]",
     borderHover: "hover:border-pink-400/60 hover:shadow-[0_0_25px_rgba(236,72,153,0.25)]",
@@ -196,7 +187,7 @@ export const Projects = () => {
 
   // Grouped projects for Section-Wise view
   const groupedProjects = useMemo(() => {
-    const groups: Record<string, typeof PROJECTS[number][]> = {};
+    const groups: Record<string, any[]> = {};
     const categoriesToGroup =
       activeCategory === "all"
         ? Object.keys(CATEGORY_META)
@@ -369,7 +360,7 @@ export const Projects = () => {
                 {/* Explore Hub Button Footer */}
                 <div className="relative z-10 mt-4 pt-3 border-t border-white/[0.08] flex items-center justify-between text-xs font-semibold text-purple-300 group-hover:text-cyan-300 transition-colors">
                   <span>Explore Hub</span>
-                  <FaArrowRight className="text-[11px] group-hover:translate-x-1.5 transition-transform duration-300" />
+                  <span className="text-base group-hover:translate-x-1.5 transition-transform duration-300">→</span>
                 </div>
               </div>
             );
@@ -432,7 +423,7 @@ export const Projects = () => {
                 }`}
                 title="Section-by-Section View"
               >
-                <FaThList className="text-[11px]" />
+                <span>☰</span>
                 <span className="hidden sm:inline">Section Wise</span>
               </button>
               <button
@@ -444,7 +435,7 @@ export const Projects = () => {
                 }`}
                 title="Grid View"
               >
-                <FaThLarge className="text-[11px]" />
+                <span>⊞</span>
                 <span className="hidden sm:inline">Grid View</span>
               </button>
             </div>

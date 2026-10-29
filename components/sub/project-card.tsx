@@ -3,8 +3,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useRef, MouseEvent } from "react";
-import { FaPlay, FaCube, FaExternalLinkAlt, FaTimes } from "react-icons/fa";
-import { RxGithubLogo } from "react-icons/rx";
+import { FaPlay, FaCube, FaExternalLinkAlt } from "react-icons/fa";
+import { RxGithubLogo, RxCross2 } from "react-icons/rx";
 import { ModelViewer } from "./model-viewer";
 
 export type ProjectCardProps = {
@@ -134,7 +134,7 @@ export const ProjectCard = ({
                   className="absolute top-3 right-3 p-1.5 rounded-full bg-black/70 hover:bg-red-600/80 text-white text-xs backdrop-blur-md transition-colors border border-white/20 z-20"
                   title="Close Video"
                 >
-                  <FaTimes />
+                  <RxCross2 />
                 </button>
               </div>
             ) : (
@@ -287,7 +287,7 @@ export const ProjectCard = ({
                 onClick={() => setIsViewingModel(false)}
               >
                 <span>Close</span>
-                <FaTimes />
+                <RxCross2 className="text-sm" />
               </button>
             </div>
 
