@@ -13,10 +13,14 @@ export type ProjectCardProps = {
   model?: string;
   title: string;
   description: string;
+  shortDescription?: string;
   link: string;
+  liveLink?: string;
+  github?: string;
   category?: string;
   subcategory?: string;
   tags?: readonly string[] | string[];
+  highlights?: readonly string[] | string[];
 };
 
 export const ProjectCard = ({
@@ -25,10 +29,14 @@ export const ProjectCard = ({
   model,
   title,
   description,
+  shortDescription,
   link,
+  liveLink,
+  github,
   category,
   subcategory,
   tags,
+  highlights,
 }: ProjectCardProps) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isViewingModel, setIsViewingModel] = useState(false);
@@ -50,60 +58,54 @@ export const ProjectCard = ({
         return {
           pill: "border-orange-500/40 text-orange-300 bg-orange-950/40",
           glow: "from-orange-500/20 via-amber-500/10 to-transparent",
-          tagBorder: "group-hover:border-orange-500/30",
         };
       case "Web Development":
+      case "AI & Robotics":
         return {
           pill: "border-cyan-500/40 text-cyan-300 bg-cyan-950/40",
           glow: "from-cyan-500/20 via-blue-500/10 to-transparent",
-          tagBorder: "group-hover:border-cyan-500/30",
         };
       case "Interior Design":
         return {
           pill: "border-emerald-500/40 text-emerald-300 bg-emerald-950/40",
           glow: "from-emerald-500/20 via-teal-500/10 to-transparent",
-          tagBorder: "group-hover:border-emerald-500/30",
         };
       case "Game Assets":
         return {
           pill: "border-purple-500/40 text-purple-300 bg-purple-950/40",
           glow: "from-purple-500/20 via-pink-500/10 to-transparent",
-          tagBorder: "group-hover:border-purple-500/30",
         };
       case "Java Projects":
         return {
           pill: "border-amber-500/40 text-amber-300 bg-amber-950/40",
           glow: "from-amber-500/20 via-red-500/10 to-transparent",
-          tagBorder: "group-hover:border-amber-500/30",
         };
       case "Backend Projects":
         return {
           pill: "border-teal-500/40 text-teal-300 bg-teal-950/40",
           glow: "from-teal-500/20 via-emerald-500/10 to-transparent",
-          tagBorder: "group-hover:border-teal-500/30",
         };
       case "SQL Projects":
         return {
           pill: "border-blue-500/40 text-blue-300 bg-blue-950/40",
           glow: "from-blue-500/20 via-cyan-500/10 to-transparent",
-          tagBorder: "group-hover:border-blue-500/30",
         };
       case "Graphic Design":
         return {
           pill: "border-pink-500/40 text-pink-300 bg-pink-950/40",
           glow: "from-pink-500/20 via-fuchsia-500/10 to-transparent",
-          tagBorder: "group-hover:border-pink-500/30",
         };
       default:
         return {
           pill: "border-cyan-500/40 text-cyan-300 bg-cyan-950/40",
           glow: "from-cyan-500/20 via-purple-500/10 to-transparent",
-          tagBorder: "group-hover:border-cyan-500/30",
         };
     }
   };
 
   const currentStyles = getCategoryStyles(category);
+  const targetLiveLink = liveLink || (link && !link.includes("github.com") ? link : undefined);
+  const targetGithub = github || (link && link.includes("github.com") ? link : undefined);
 
   return (
     <>
@@ -218,8 +220,20 @@ export const ProjectCard = ({
 
             {/* Description */}
             <p className="mt-2 text-xs md:text-sm text-gray-300/80 leading-relaxed line-clamp-3">
-              {description}
+              {shortDescription || description}
             </p>
+
+            {/* Key Highlights (if available) */}
+            {highlights && highlights.length > 0 && (
+              <div className="mt-3 space-y-1">
+                {highlights.slice(0, 2).map((item, idx) => (
+                  <div key={idx} className="flex items-center gap-1.5 text-[11px] text-gray-400">
+                    <span className="text-cyan-400 text-[10px]">•</span>
+                    <span className="truncate">{item}</span>
+                  </div>
+                ))}
+              </div>
+            )}
 
             {/* Tech Stack Glass Tags */}
             {tags && tags.length > 0 && (
@@ -238,14 +252,14 @@ export const ProjectCard = ({
         </div>
 
         {/* Card Action Footer */}
-        <div className="relative z-10 p-4 pt-0 flex items-center justify-between gap-2.5 border-t border-white/[0.08] mt-2">
+        <div className="relative z-10 p-4 pt-0 flex flex-wrap items-center justify-between gap-2 border-t border-white/[0.08] mt-2">
           {model ? (
             <button
               onClick={() => setIsViewingModel(true)}
               className="flex-1 flex items-center justify-center gap-2 px-3 py-2 rounded-xl bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white text-xs font-semibold shadow-[0_0_15px_rgba(6,182,212,0.25)] hover:shadow-[0_0_25px_rgba(6,182,212,0.4)] transition-all cursor-pointer"
             >
               <FaCube className="text-xs" />
-              <span>3D Interactive</span>
+              <span>3D Model</span>
             </button>
           ) : video && !isPlaying ? (
             <button
@@ -257,16 +271,30 @@ export const ProjectCard = ({
             </button>
           ) : null}
 
-          <Link
-            href={link}
-            target="_blank"
-            rel="noreferrer noopener"
-            className="flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl bg-white/[0.05] hover:bg-white/[0.1] border border-white/10 hover:border-purple-400/50 text-gray-200 hover:text-white text-xs font-semibold backdrop-blur-md transition-all"
-          >
-            <RxGithubLogo className="text-sm" />
-            <span>Project</span>
-            <FaExternalLinkAlt className="text-[9px] opacity-70" />
-          </Link>
+          {targetLiveLink && (
+            <Link
+              href={targetLiveLink}
+              target="_blank"
+              rel="noreferrer noopener"
+              className="flex-1 flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl bg-gradient-to-r from-cyan-500/20 to-blue-500/20 hover:from-cyan-500/30 hover:to-blue-500/30 border border-cyan-400/40 text-cyan-200 hover:text-white text-xs font-semibold backdrop-blur-md shadow-[0_0_12px_rgba(6,182,212,0.2)] transition-all"
+            >
+              <span>Live Demo</span>
+              <FaExternalLinkAlt className="text-[9px] opacity-80" />
+            </Link>
+          )}
+
+          {targetGithub && (
+            <Link
+              href={targetGithub}
+              target="_blank"
+              rel="noreferrer noopener"
+              className="flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl bg-white/[0.05] hover:bg-white/[0.1] border border-white/10 hover:border-purple-400/50 text-gray-200 hover:text-white text-xs font-semibold backdrop-blur-md transition-all"
+            >
+              <RxGithubLogo className="text-sm" />
+              <span className={targetLiveLink ? "hidden sm:inline" : ""}>GitHub</span>
+              <FaExternalLinkAlt className="text-[9px] opacity-70" />
+            </Link>
+          )}
         </div>
       </div>
 

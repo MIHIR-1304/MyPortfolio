@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="ni-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1c0c02"/>
+      <stop offset="50%" stop-color="#2a1204"/>
+      <stop offset="100%" stop-color="#120601"/>
+    </linearGradient>
+    <linearGradient id="amber-orange" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#EF4444"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#ni-bg)"/>
+
+  <!-- Java Console Terminal Graphic -->
+  <rect x="180" y="80" width="440" height="210" rx="14" fill="#0f0502" stroke="#f59e0b" stroke-width="2"/>
+  <rect x="180" y="80" width="440" height="34" rx="14" fill="#301405"/>
+  <circle cx="205" cy="97" r="5" fill="#ef4444"/>
+  <circle cx="222" cy="97" r="5" fill="#f59e0b"/>
+  <circle cx="239" cy="97" r="5" fill="#10b981"/>
+  <text x="400" y="102" text-anchor="middle" fill="#fcd34d" font-family="monospace" font-size="12" font-weight="bold">NumberEngine.java [JDK 21 - OOP Architecture]</text>
+
+  <!-- Console Log / Calculations -->
+  <g transform="translate(205, 135)" font-family="monospace" font-size="11" fill="#fed7aa">
+    <text y="15" fill="#f59e0b">&gt; Enter Integer Value: 104729</text>
+    <text y="35" fill="#6ee7b7">&gt;&gt; [STATUS] Prime Number Verified (10,000th Prime)</text>
+    <text y="55" fill="#93c5fd">&gt;&gt; Binary: 11001100100011001 | Octal: 314431</text>
+    <text y="75" fill="#fcd34d">&gt;&gt; Fibonacci Sequence Step Evaluation: Complete</text>
+    <text y="95" fill="#c084fc">&gt;&gt; Armstrong &amp; Palindrome Check: Passed</text>
+    <text y="115" fill="#f43f5e">&gt;&gt; Execution Benchmark: 0.42 ms (O(sqrt(N)) Optimized)</text>
+  </g>
+
+  <!-- Title Badge Frame -->
+  <rect x="200" y="310" width="400" height="60" rx="12" fill="#200d04" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="400" y="338" text-anchor="middle" fill="url(#amber-orange)" font-family="sans-serif" font-size="20" font-weight="bold" letter-spacing="2">NUMBER INTELLIGENCE ENGINE</text>
+  <text x="400" y="358" text-anchor="middle" fill="#fed7aa" font-family="sans-serif" font-size="11">MENU-DRIVEN CORE JAVA COMPUTATION ARCHITECTURE</text>
+
+  <!-- Bottom Details Bar -->
+  <rect x="160" y="395" width="480" height="42" rx="21" fill="#301305" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="400" y="421" text-anchor="middle" fill="#fcd34d" font-family="sans-serif" font-size="14" font-weight="bold">☕ CORE JAVA • ALGORITHMIC ANALYSIS &amp; OOP</text>
+  <text x="400" y="460" text-anchor="middle" fill="#94a3b8" font-family="sans-serif" font-size="12">Mathematical Sequences • Modular OOP • Console Intelligence</text>
+</svg>

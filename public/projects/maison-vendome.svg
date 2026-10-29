@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="mv-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0518"/>
+      <stop offset="50%" stop-color="#140a2c"/>
+      <stop offset="100%" stop-color="#05020c"/>
+    </linearGradient>
+    <linearGradient id="gold-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCD34D"/>
+      <stop offset="50%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+    <linearGradient id="emerald-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#mv-bg)"/>
+
+  <!-- Subtle gold geometric luxury grid -->
+  <circle cx="400" cy="220" r="170" fill="none" stroke="#f59e0b" stroke-opacity="0.15" stroke-width="1.5" stroke-dasharray="6 6"/>
+  <circle cx="400" cy="220" r="130" fill="none" stroke="#f59e0b" stroke-opacity="0.2" stroke-width="1"/>
+  <circle cx="400" cy="220" r="210" fill="none" stroke="#7042f8" stroke-opacity="0.2" stroke-width="1.5"/>
+
+  <!-- Luxury Crown / Facade Graphic -->
+  <g transform="translate(400, 150)" text-anchor="middle">
+    <!-- Diamond Shape -->
+    <polygon points="0,-45 42,-5 0,35 -42,-5" fill="none" stroke="url(#gold-grad)" stroke-width="2.5" filter="url(#glow)"/>
+    <polygon points="0,-30 28,-5 0,20 -28,-5" fill="url(#gold-grad)" fill-opacity="0.2"/>
+    <line x1="-42" y1="-5" x2="42" y2="-5" stroke="url(#gold-grad)" stroke-width="1.5"/>
+    <line x1="0" y1="-45" x2="0" y2="35" stroke="url(#gold-grad)" stroke-width="1.5"/>
+
+    <!-- Central Monogram -->
+    <text y="7" fill="#ffffff" font-family="'Cinzel', 'Playfair Display', serif, sans-serif" font-size="16" font-weight="bold" letter-spacing="2">MV</text>
+  </g>
+
+  <!-- Luxury Card Presentation -->
+  <rect x="180" y="220" width="440" height="135" rx="12" fill="#0d0722" stroke="#f59e0b" stroke-opacity="0.4" stroke-width="1.5"/>
+  <text x="400" y="255" text-anchor="middle" fill="url(#gold-grad)" font-family="'Cinzel', 'Playfair Display', serif, sans-serif" font-size="22" font-weight="bold" letter-spacing="4">MAISON VENDÔME</text>
+  <text x="400" y="280" text-anchor="middle" fill="#e2e8f0" font-family="sans-serif" font-size="12" letter-spacing="2">PARISIAN LUXURY E-COMMERCE PLATFORM</text>
+
+  <!-- Architecture Badges -->
+  <g transform="translate(205, 305)">
+    <rect x="0" y="0" width="70" height="24" rx="6" fill="#3b82f6" fill-opacity="0.15" stroke="#3b82f6" stroke-width="1"/>
+    <text x="35" y="16" text-anchor="middle" fill="#93c5fd" font-family="sans-serif" font-size="11" font-weight="bold">React.js</text>
+
+    <rect x="80" y="0" width="105" height="24" rx="6" fill="#10b981" fill-opacity="0.15" stroke="#10b981" stroke-width="1"/>
+    <text x="132" y="16" text-anchor="middle" fill="#6ee7b7" font-family="sans-serif" font-size="11" font-weight="bold">Spring Boot</text>
+
+    <rect x="195" y="0" width="95" height="24" rx="6" fill="#06b6d4" fill-opacity="0.15" stroke="#06b6d4" stroke-width="1"/>
+    <text x="242" y="16" text-anchor="middle" fill="#67e8f9" font-family="sans-serif" font-size="11" font-weight="bold">PostgreSQL</text>
+
+    <rect x="300" y="0" width="85" height="24" rx="6" fill="#8b5cf6" fill-opacity="0.15" stroke="#8b5cf6" stroke-width="1"/>
+    <text x="342" y="16" text-anchor="middle" fill="#c4b5fd" font-family="sans-serif" font-size="11" font-weight="bold">Docker</text>
+  </g>
+
+  <!-- Bottom Details Bar -->
+  <rect x="150" y="390" width="500" height="42" rx="21" fill="#110830" stroke="#7042f8" stroke-width="1.5"/>
+  <text x="400" y="416" text-anchor="middle" fill="#fef08a" font-family="sans-serif" font-size="14" font-weight="bold">✨ LIVE DEMO • MICROSERVICES ARCHITECTURE</text>
+  <text x="400" y="455" text-anchor="middle" fill="#94a3b8" font-family="sans-serif" font-size="12">JWT Security • Multi-Category Discovery • Payment Gateway</text>
+</svg>
